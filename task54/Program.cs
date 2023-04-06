@@ -14,7 +14,7 @@ void FillArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 10);
+            array[i, j] = new Random().Next(1, 100);
         }
     }
 }
@@ -38,7 +38,7 @@ void SortMaxToMin(int[,] array, int max)
     {
         for (int k = 0; k < array.GetLength(1); k++)
         {
-            for (int j = 1; j < array.GetLength(1); j++)
+            for (int j = 1; j < array.GetLength(1) - k; j++)
             {
                 if (array[i, j] > array[i, j - 1])
                 {
